@@ -205,7 +205,7 @@ create procedure PayHospitalFee(
 begin
 	declare v_money decimal(18, 2);
     
-    -- có lỗi thì rôllback
+    -- nếu như xảy ra lỗi thì sẽ rollback luôn tại đay
     declare exit handler for sqlexception	
 	begin
 		rollback;
